@@ -1,0 +1,62 @@
+\documentclass{article}[11pt]
+\usepackage[left=1.0in, right=1.0in, top=1.0in, bottom=1.0in,nohead]{geometry}              		
+\geometry{letterpaper}
+
+\usepackage{graphicx}														
+\usepackage{amssymb, amsmath, amsfonts}
+\usepackage{setspace}
+
+\newcommand{\Matlab}{\textsc{Matlab}}
+
+\title{Status Report on Analyzing Time-Frequency Methods and Unsupervised Clustering Algorithms for Footstep Classification}
+\author{Group Members: Kaitlyn Beaudet, Brett Larsen, Lydia Letham, Tianran Liu}
+\date{}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%								REQUIREMENTS									%
+% Project Title																		%
+% Name(s) of team member(s)															%
+% Summary of the main ideas (1-2 paragraphs)											%
+% Project Tasks (description of tasks and who completed/will complete)							%
+% 			Tasks Completed														%
+%			Tasks to be Completed													%
+% 3 main references (only)															%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+\maketitle
+\doublespace
+
+\vspace{-30pt}
+
+\section{Summary}
+\label{sec:summary}
+
+The problem of detecting and classifying vibration signals produced by footsteps has many applications in national security, such as alerting authorities to activity on the border. To this end, the goal of the project is to accurately detect and classify different classes of footsteps without false positives caused by friendly forces or natural elements, such as animal traffic or blowing plant life (e.g. tumbleweeds). In order to observe the feasibility of time-frequency techniques in determining such a classification, an attempt will be made to detect and classify various movement patterns produced by adults, children, and animals.  These trials will expand upon the simple horse, person walking, person running classification performed in \cite{Damarla2011} and \cite{Mehmood2012}.
+
+Data for this experiment was collected in an environment similar to that of the Southwest border. Eight GS-One geophone sensors were used with two NI DAQ cards and \Matlab \ to collect the data. The team will now try and compare different methods of feature extraction and time-frequency classification methods to determine which yields the best results. The methods being examined are matching pursuit decomposition (MPD), Wigner distribution (WD), reduced interference distribution (RID) as well as the spectrogram and the ambiguity function. For feature extraction and classification purposes, Bayesian classifiers, random projection, and linear discriminant analysis (LDA) will be examined.  This study will expand upon the findings in \cite{Larsen2013} to see if it is possible to classify different categories, rather than solely walking or running.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\vspace{-10pt}
+\section{Project Tasks}
+\label{sec:tasks}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Tasks Completed}
+\label{sec:completed}
+Thus far, data has been gathered by the team. Brett set up the sensors for gathering data, and Kaitlyn was responsible for writing the \Matlab \ code to set up the system and collect and save the data gathered. The entire team then participated in the gathering of data, acting as test subjects, along with a child and a dog to determine the difference between different vibration signals. To this end, experiments were performed using a child, an adult and a child, an adult with the dog, adults alone, and adult groups of different size. Trials were performed both running and walking for the stated categories. Additionally, the team has begun to analyze the data using \Matlab. The spectrograms for the data have been obtained, and work on the MPD, WD, RID, and the ambiguity function have been started by Brett, Lydia, Kaitlyn, and Tianran respectively. Additionally, Kaitlyn and Brett have begun working on code to complete LDA.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Tasks to be Completed}
+\label{sec:future}
+The first step in finishing the project is generating the Time-Frequency Representation (TFR) of the collected data. In this process, Brett is responsible for MPD, Lydia is responsible for the WD, Kaitlyn will focus on the RID, and Tianran will finish up the ambiguity function.
+Once the various TFR's have been obtained, the next step will be to obtain appropriate time-frequency features using feature extraction methods such as LDA and random projection. These methods will help determine some of the distinguishing features to be used in classification. For MPD, most of the classification effort will be focused on using the produced feature vector, although more information may be extracted if the Gaussian parameters are not sufficient. In addition, the dictionary in the Matching Pursuit algorithm will be replaced with real data in order to better match the vibration signals. The final step will be to attempt to classify different types of footsteps based on the extracted data. Initially, a Bayesian classifier will be used, but more advanced classifiers will be investigated as well. In addition, the project will end by looking at the feasibility of Gaussian mixture models for unsupervised clustering and adaptive sensing, although this likely will not be carried out to completion by the end of the semester.
+
+%This involves expanding the written \Matlab \ code such that it can loop through the hundreds of signals collected instead of having the run the program individuals on each set of data.
+
+%Bibliography
+\bibliographystyle{IEEEtran}
+\bibliography{proposal_refs.bib}
+
+\end{document}
