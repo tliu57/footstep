@@ -1,0 +1,58 @@
+\documentclass{article}[11pt]
+\usepackage[left=1.0in, right=1.0in, top=1.0in, bottom=1.0in,nohead]{geometry}              		
+\geometry{letterpaper}
+
+\usepackage{graphicx}														
+\usepackage{amssymb, amsmath, amsfonts}
+\usepackage{setspace}
+\usepackage{fullpage}
+\usepackage[T1]{fontenc}
+
+\title{Project Title}
+\author{Group Members: Kaitlyn Beaudet, Brett Larsen, Lydia Letham, Tianran Liu}
+\date{}
+
+\newcommand{\heading}[2]
+{
+\begin{center}
+\huge{#1} \\
+\normalsize {Group Members: #2}
+\end{center}
+}
+
+\newcommand{\lineunder}{\vspace*{-2pt} \hspace*{-18pt} \hrulefill \\}
+\newcommand{\header}[1]{\vspace*{10pt} \noindent \large \textbf{\textsc{#1}} \vspace*{-15pt} \\ \lineunder \normalsize}
+
+\renewcommand{\refname}{\header{References}}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%								REQUIREMENTS									%
+% Project Title																		%
+% Name(s) of team member(s)															%
+% Summary of the main ideas (1-2 paragraphs)											%
+% Planned procedure steps (1-2 paragraphs)												%
+% Plans of work division among team members (if applicable)									%
+% 3 main references (only)															%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+\doublespace
+
+\heading{Project Title}{Kaitlyn Beaudet, Brett Larsen, Lydia Letham, Tianran Liu}
+
+\header{Summary}
+Section Content
+
+\header{Proposal Method}
+Section Content
+
+\header{Team Task Assignment}
+Section Content \\
+Citation: \cite{Book1} [Typset: LaTex, BibTex, Latex, Latex] \\
+\cite{Damarla2011,Larsen2013, Mehmood2012} \\
+
+%Bibliography
+\bibliographystyle{IEEEbib}
+\bibliography{proposal_refs.bib}
+
+\end{document}

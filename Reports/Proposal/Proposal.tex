@@ -1,0 +1,53 @@
+\documentclass{article}[11pt]
+\usepackage[left=1.0in, right=1.0in, top=1.0in, bottom=1.0in,nohead]{geometry}              		
+\geometry{letterpaper}
+
+\usepackage{graphicx}														
+\usepackage{amssymb, amsmath, amsfonts}
+\usepackage{setspace}
+
+\title{Analyzing Time-Frequency Methods and Unsupervised Clustering Algorithms for Footstep Classification}
+\author{Group Members: Kaitlyn Beaudet, Brett Larsen, Lydia Letham, Tianran Liu}
+\date{}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%								REQUIREMENTS									%
+% Project Title																		%
+% Name(s) of team member(s)															%
+% Summary of the main ideas (1-2 paragraphs)											%
+% Planned procedure steps (1-2 paragraphs)												%
+% Plans of work division among team members (if applicable)									%
+% 3 main references (only)															%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+\maketitle
+\doublespace
+
+\section{Summary}
+\label{sec:summary}
+The problem of detecting and classifying seismic signals produced by footsteps has many applications in national security, such as alerting authorities to activity on the border. To this end, the goal of the project is to accurately detect and classify different classes of footsteps without false positives caused by friendly forces or natural elements, such as animal traffic or blowing plant life (e.g. tumbleweeds). In order to observe the feasibility of time-frequency techniques in determining such a classification, an attempt will be made to detect and classify various movement patterns within the scope of adults running, adults walking, children running, children walking, and animal movement, represented by a dog running.  These trials will expand upon the simple horse, person walking, person running classification performed in \cite{Damarla2011} and \cite{Mehmood2012}.
+%\indent The most recent work in this area, completed at the U.S. Army Research Laboratory, made use of the Wigner-Ville distribution to create a time-frequency representation of seismic signals produced both humans and horses walking.  The work showed successful classification based off of features extracted from this representation using linear discriminant analysis and random projection \cite{Mehmood2012}.  This project will expand upon such work, looking at the use of other time-frequency representations and classifiers to analyze seismic signals as well as attempt to classify a broader range of entities that could be passing the sensor.
+\section{Proposal Method}
+\label{sec:procedure}
+In order to achieve an accurate and thorough understanding of the seismic signals produced by footsteps, real life data will be gathered for analysis in an environment similar to the Southwest border. Data will be captured using ten GS-One geophone sensors and an NI DAQ card and then fed into Matlab for analysis. Multiple trials will be performed for each subject category, all in the same environment. \\ 
+\indent To ascertain which feature extraction and time-frequency classification methods provide the best classification results, the team will try and compare different methods. First, the team will use the Wigner-Ville distribution in conjunction with linear discriminant analysis (LDA) as was used in \cite{Mehmood2012}.  This will serve as a comparison point between the new methods and those developed by the U.S. Army Research Lab. Next, the team will focus on using matching pursuit decomposition (MPD) for feature extraction and classification, both using Gaussians as the basis set as well projecting the signal onto real data.  As in \cite{Larsen2013}, the MPD time-frequency representation (TFR) of 
+ the signal $s(t)$ using a Gaussian dictionary is defined as
+\begin{equation}
+M_s(t,f) \equiv \sum^{N-1}_{i=0} |\kappa_{i}|^{2} \, 
+\text{WD}_{g_{i}}(t,f),
+\label{eq:gaus}
+\end{equation}
+where WD$_{g_i}(t, f)$ is the Wigner distribution of $g_i(t)$, 
+the time-frequency shifted and scaled Gaussian atom.  In addition, the ambiguity function, spectrogram, and reduced interference distribution (RID) will be compared as time-frequency methods of feature extraction and classification. Finally, the team will experiment with unsupervised clustering of seismic signals from footsteps using Gaussian mixture models. 
+
+\section{Team Task Assignment}
+\label{sec:assignments}
+Each member of the team will perform feature extraction and classification.  Brett Larsen will be in charge of analyzing the new data using matching pursuit decomposition.  As an extension of previous methods, he will also be implementing MPD with a data dictionary (obtained from pre-classified data sets).  Brett will also be in charge of setting up the sensors for gathering data.  Lydia Letham will be analyzing using the Wigner-Ville representation.  Wigner-Ville has been used in the literature in combination with an LDA classifier and acts as the control TFR, enabling the team to compare results with previous work. In an extension of the project, Lydia will also work on implementing an unsupervised learning algorithm such as a Gaussian mixture model.  Tianran Liu will be in charge of analysis using the ambiguity function and the cross ambiguity function.  The ambiguity function is related to the Wigner-Ville distribution but should be more accurate. Tianran will also conduct analysis using the spectrogram.  Kaitlyn Beaudet will be conducting analysis using the reduced interference distribution, a modified form of Wigner-Ville which is expected produce better results for seismic data. Kaitlyn will also be in charge of organizing the Matlab data and code such that it is easy to implement and maintain.
+
+%Bibliography
+\bibliographystyle{IEEEtran}
+\bibliography{proposal_refs.bib}
+
+\end{document}

@@ -1,0 +1,82 @@
+Sensor configuration
+-Read paper
+-Get an estimate of how much data we need
+(44 sets of data)
+
+--Should we group sensors
+
+Spread out 2 sensors at each point
+
+4 sensor groups with 2 DAC cards.
+
+
+
+Trials (who walks and how many times)
+
+Coordinate with Kaitlyn how to sort the data into matlab right away. 
+
+
+Trails (Desert Breeze Park)
+
+Terrain(same terrain.  Justs get the best type)
+
+Set up the experiment:  
+
+Continue Literature search: (Unsupervised clustering with footsteps, or MPD with footsteps)
+
+How to Record:
+
+1) set up each sensor outside of each other's range.  Toggle between recording with sensor1 and sensor2 depending on which sensor is being walked around.
+
+2) Set up each sensor within each other's range.  Record on sensor1 and sensor2 simultaneously.  Cut the data from sensor1 into 5 parts.  And cut the data from sensor2 into 5 parts.  Now we have 10 data sets.
+
+
+
+
+
+
+[B,K]	=> L,T	2x10 data 	Walk(1)
+	=> L,T	2x10 data 	Run(1)
+	=> A,S	2x10 data 	child_walk(1)
+	=> A,S	2x10 data 	child_run(1)
+
+	=> L+Dog	1x10 data 	animal_walk(1)	,  T+A+S	1x10 data 	2child/adult_Walk(2)
+	=> L+Dog	1x10 data 	animal_run(1)	,  T+A+S	1x10 data 	2child/adult_run(2)
+	=> T+Dog	1x10 data 	animal_walk(1)  ,  L+A+S	1x10 data 	2child/adult_walk(2)
+	=> T+Dog	1x10 data 	animal_run(1)	,  L+A+S	1x10 data 	2child/adult_run(2)	
+
+	=> L+A, T+S	2x10 data 	child/adult_Walk(2)
+	=> L+A, T+S	2x10 data 	child/adult_run(2)
+
+
+	=> L+A+T	1x10 data 	child/2adult_Walk(3)		//Need another adult to run parallel
+	=> L+A+T	1x10 data 	child/2adult_run(3)
+	=> L+S+T	1x10 data 	child/2adult_walk(3)
+	=> L+S+T	1x10 data 	child/2adult_run(3)
+
+[L,T]	=> B,K	2x10 data 	Walk(1)
+	=> B,K	2x10 data 	Run(1)
+	/=> A,S	2x10 data 	child_walk(1)
+	/=> A,S	2x10 data 	child_run(1)
+
+	=> B+Dog	1x10 data 	animal_walk(1)	,  B+A+S	1x10 data 	2child/adult_Walk(2)
+	=> B+Dog	1x10 data 	animal_run(1)	,  B+A+S	1x10 data 	2child/adult_run(2)
+	=> K+Dog	1x10 data 	animal_walk(1)  ,  K+A+S	1x10 data 	2child/adult_walk(2)
+	=> K+Dog	1x10 data 	animal_run(1)	,  K+A+S	1x10 data 	2child/adult_run(2)	
+
+	=> B+A, K+S	2x10 data 	child/adult_Walk(2)
+	=> B+A, K+S	2x10 data 	child/adult_run(2)
+
+
+	=> B+A+K	1x10 data 	child/2adult_Walk(3)		//Need another adult to run parallel
+	=> B+A+K	1x10 data 	child/2adult_run(3)
+	=> B+S+K	1x10 data 	child/2adult_walk(3)
+	=> B+S+K	1x10 data 	child/2adult_run(3)
+
+	
+[B] 	=> L+T+K+A	1x10 data 	child/3adult_walk(4)
+	=> L+T+K+A	1x10 data 	child/3adult_run(4)
+	=> L+T+K+S	1x10 data 	child/3adult_walk(4)
+	=> L+T+K+S	1x10 data 	child/3adult_run(4)
+
+	=> L+T+K+A+S	1x10 data 	2child/3adult_walk(5)

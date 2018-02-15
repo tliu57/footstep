@@ -1,0 +1,23 @@
+\begin{thebibliography}{1}
+
+\bibitem{Damarla2011}
+Thyagaraju Damarla and James Sabatier,
+\newblock ``Classification of people walking and jogging/running using
+  multimodal sensor signatures,''
+\newblock {\em Proc. SPIE}, vol. 8019, pp. 80190N--80190N--8, June 2011.
+
+\bibitem{Mehmood2012}
+A.~Mehmood, V.M. Patel, and T.~Damarla,
+\newblock ``Discrimination of bipeds from quadrupeds using seismic footstep
+  signatures,''
+\newblock in {\em Geoscience and Remote Sensing Symposium (IGARSS), 2012 IEEE
+  International}, 2012, pp. 6920--6923.
+
+\bibitem{Larsen2013}
+Brett~W. Larsen, Hugh Chung, Alfonso Dominguez, Jacob Sciacca, Narayan Kovvali,
+  Antonia Papandreou-Suppappola, and David~R. Allee,
+\newblock ``Applying matching pursuit decomposition time-frequency processing
+  to ugs footstep classification,''
+\newblock {\em Proc. SPIE}, vol. 8711, pp. 871104--871104--13, June 2013.
+
+\end{thebibliography}
